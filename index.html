@@ -4,271 +4,166 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet">
 
 <title>Mount Carmel Church Ramapuram</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Poppins', 'Noto Sans Tamil', sans-serif;
-    transition: 0.4s;
-}
+body { margin:0; font-family:'Poppins','Noto Sans Tamil',sans-serif; }
 
-.light { background: #f5f5f5; color: #111; }
-.dark { background: #0d0d0d; color: #fff; }
+.light { background:#f5f5f5; color:#111; }
+.dark { background:#0d0d0d; color:#fff; }
 
-/* HEADER */
 header {
-    padding: 15px;
-    text-align: center;
-    font-weight: 600;
-    background: linear-gradient(45deg, #8b0000, #b22222);
-    color: white;
+    padding:15px;
+    text-align:center;
+    background:#8b0000;
+    color:white;
 }
 
-/* SCROLL TEXT */
-.marquee {
-    background: #8b0000;
-    color: white;
-    padding: 10px;
-    white-space: nowrap;
-    overflow: hidden;
+/* TOP TEXT */
+.top-lines {
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:10px;
 }
-.marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll 12s linear infinite;
+
+/* NAV */
+nav {
+    display:flex;
+    justify-content:center;
+    background:#8b0000;
 }
-@keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
+nav a {
+    color:white;
+    padding:12px;
+    text-decoration:none;
 }
 
 /* HERO */
 .hero {
-    height: 100vh;
-    background: url('jesus.jpg') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+    height:100vh;
+    background:url('jesus.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
 }
 .hero-box {
-    background: rgba(0,0,0,0.65);
-    padding: 25px;
-    border-radius: 15px;
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:10px;
 }
 
-/* SECTIONS */
-section { padding: 25px; text-align: center; }
+/* SECTION */
+section { padding:20px; text-align:center; }
 
 /* BUTTON */
 button {
-    padding: 12px 25px;
-    border-radius: 25px;
-    border: none;
-    background: #8b0000;
-    color: white;
-}
-
-/* MAP BUTTON */
-.map-btn {
-    display: inline-block;
-    margin-top: 10px;
-    background: #007bff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
-}
-
-/* CONTACT */
-.contact a {
-    background: #25D366;
-    padding: 12px 20px;
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
-}
-
-/* GALLERY */
-.gallery img {
-    width: 45%;
-    margin: 5px;
-    border-radius: 10px;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#8b0000;
+    color:white;
 }
 
 /* FLOAT BUTTON */
 .toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: black;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:black;
+    color:white;
+    padding:12px;
+    border-radius:50%;
 }
 
 /* FOOTER */
 .footer {
-    text-align: center;
-    padding: 15px;
-    background: linear-gradient(45deg, #8b0000, #b22222);
-    color: white;
+    background:#8b0000;
+    color:white;
+    text-align:center;
+    padding:10px;
 }
 </style>
 </head>
 
 <body class="light">
 
-<!-- FLOAT BUTTON -->
 <div class="toggle" onclick="toggleMode()">🌙</div>
 
-<header>
-MOUNT CARMEL CHURCH RAMAPURAM
-</header>
+<header>MOUNT CARMEL CHURCH RAMAPURAM</header>
 
-<!-- SCROLL TEXT -->
-<div class="marquee">
-<span>புனித கார்மல் அன்னையே எங்களுக்காக வேண்டிக்கொள்ளும் ✝️</span>
+<div class="top-lines">
+<p>Welcome to Mount Carmel Church</p>
+<p>அன்புடன் வரவேற்கிறோம்</p>
+<p>Feast - July 16</p>
 </div>
 
-<!-- HERO -->
+<nav>
+<a href="index.html">Home</a>
+<a href="contact.html">Contact</a>
+<a href="youtube.html">YouTube</a>
+<a href="donate.html">Donate</a>
+</nav>
+
 <div class="hero">
 <div class="hero-box">
 <h1>Come to Me</h1>
-<p>Matthew 11:28</p>
-<p>“சுமைகளைச் சுமந்துகொண்டிருப்பவர்கள் எல்லாரும் என்னிடத்தில் வாருங்கள்”</p>
-<button onclick="alert('God Bless You 🙏')">Join Us</button>
+<p>“என்னிடத்தில் வாருங்கள்”</p>
 </div>
 </div>
 
-<!-- MASS -->
 <section>
-<h2>⛪ Mass Timings</h2>
-<p>Sunday: 6:00 AM & 9:00 AM</p>
-<p>Weekdays: 6:30 AM</p>
+<h2>🎉 Feast Countdown</h2>
+<div id="countdown"></div>
 </section>
 
-<!-- COUNTDOWN -->
-<section>
-<h2>🎉 Feast Day Countdown (July 16)</h2>
-<div id="countdown" style="
-font-size:22px;
-background:linear-gradient(45deg,#8b0000,#b22222);
-color:white;
-padding:15px;
-border-radius:10px;
-display:inline-block;">
-</div>
-</section>
-
-<!-- LOCATION -->
 <section>
 <h2>📍 Location</h2>
-<iframe src="https://www.google.com/maps?q=Mount+Carmel+Church+Ramapuram&output=embed"
-width="100%" height="250"></iframe>
-<br>
-<a class="map-btn" target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Mount+Carmel+Church+Ramapuram">
-Open in Google Maps
-</a>
+<iframe src="https://www.google.com/maps?q=Mount+Carmel+Church+Ramapuram&output=embed" width="100%" height="250"></iframe>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
-<h2>📞 Contact</h2>
-<a href="https://wa.me/91XXXXXXXXXX">Chat on WhatsApp</a>
-</section>
-
-<!-- YOUTUBE -->
-<section>
-<h2>🎥 Church Videos</h2>
-<iframe width="100%" height="250"
-src="https://www.youtube.com/embed?listType=user_uploads&list=jrcreations4831"
-frameborder="0" allowfullscreen></iframe>
-<br><br>
-<a href="https://youtube.com/@jrcreations4831" target="_blank">
-<button>Visit Channel</button>
-</a>
-</section>
-
-<!-- GALLERY -->
-<section class="gallery">
-<h2>📷 Gallery</h2>
-<img src="church.jpg">
-<img src="church2.jpg">
-<br><br>
-<a href="gallery.html">
-<button>View More</button>
-</a>
-</section>
-
-<!-- FOOTER -->
 <footer class="footer">
 புனித கார்மல் அன்னையே எங்களுக்காக வேண்டிக்கொள்ளும்
 </footer>
 
-<!-- AUDIO -->
-<audio id="bellSound">
-<source src="bell.mp3" type="audio/mpeg">
-</audio>
-
 <script>
-// NIGHT MODE
-function toggleMode() {
-    document.body.classList.toggle("dark");
-    document.body.classList.toggle("light");
+function toggleMode(){
+document.body.classList.toggle("dark");
+document.body.classList.toggle("light");
 }
 
-// AUTO JULY 16 COUNTDOWN
-function getNextFeast() {
-    var now = new Date();
-    var year = now.getFullYear();
-    var feast = new Date(year, 6, 16, 0, 0, 0);
-
-    if (now > feast) {
-        feast = new Date(year + 1, 6, 16, 0, 0, 0);
-    }
-
-    return feast.getTime();
+function getNextFeast(){
+let now=new Date();
+let year=now.getFullYear();
+let feast=new Date(year,6,16);
+if(now>feast) feast=new Date(year+1,6,16);
+return feast.getTime();
 }
 
-var feastDate = getNextFeast();
+let feastDate=getNextFeast();
 
-setInterval(function() {
-    var now = new Date().getTime();
-    var d = feastDate - now;
+setInterval(()=>{
+let now=new Date().getTime();
+let d=feastDate-now;
 
-    var days = Math.floor(d/(1000*60*60*24));
-    var h = Math.floor((d%(1000*60*60*24))/(1000*60*60));
-    var m = Math.floor((d%(1000*60*60))/(1000*60));
-    var s = Math.floor((d%(1000*60))/1000);
+let days=Math.floor(d/(1000*60*60*24));
+let h=Math.floor((d%(1000*60*60*24))/(1000*60*60));
+let m=Math.floor((d%(1000*60*60))/(1000*60));
+let s=Math.floor((d%(1000*60))/1000);
 
-    document.getElementById("countdown").innerHTML =
-    days+" நாட்கள் "+h+" மணி "+m+" நிமிடம் "+s+" விநாடி";
-
-    if (d < 0) {
-        document.getElementById("countdown").innerHTML =
-        "🎊 இன்று திருவிழா நாள்!";
-    }
+document.getElementById("countdown").innerHTML=
+days+"d "+h+"h "+m+"m "+s+"s";
 
 },1000);
-
-// BELL SOUND
-window.onload = function() {
-    var audio = document.getElementById("bellSound");
-    audio.play().catch(()=>{});
-};
 </script>
 
 </body>
 </html>
+
+
 
 
 
