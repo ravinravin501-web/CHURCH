@@ -1,18 +1,22 @@
-```html
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
 <title>Mount Carmel Church Ramapuram</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: 'Poppins', sans-serif;
     transition: 0.3s;
 }
 
-/* LIGHT & DARK MODE */
+/* DARK & LIGHT MODE */
 .dark {
     background: #111;
     color: white;
@@ -26,15 +30,17 @@ body {
 header {
     padding: 15px;
     font-size: 20px;
-    font-weight: bold;
-    background: #8b0000;
+    font-weight: 600;
+    background: linear-gradient(45deg, #8b0000, #b22222);
     color: white;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
-/* HERO SECTION */
+/* HERO SECTION WITH JESUS IMAGE */
 .hero {
     height: 90vh;
-    background: url('church.jpg') center/cover no-repeat;
+    background: url('jesus.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,35 +49,45 @@ header {
 }
 .hero div {
     background: rgba(0,0,0,0.6);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+/* HEADINGS */
+h1 {
+    font-size: 38px;
+}
+h2 {
+    color: #8b0000;
 }
 
 /* SECTIONS */
 section {
-    padding: 20px;
+    padding: 25px;
 }
 
 /* BUTTONS */
 button {
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
+    background: #8b0000;
+    color: white;
+    font-size: 16px;
 }
 
 /* CONTACT */
 .contact a {
     display: inline-block;
-    padding: 10px;
-    background: green;
+    padding: 12px;
+    background: #25D366;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
-/* GALLERY PREVIEW */
+/* GALLERY */
 .gallery img {
     width: 45%;
     margin: 5px;
@@ -83,6 +99,8 @@ button {
     position: fixed;
     top: 10px;
     right: 10px;
+    background: black;
+    color: white;
 }
 </style>
 </head>
@@ -97,8 +115,9 @@ MOUNT CARMEL CHURCH RAMAPURAM
 
 <div class="hero">
     <div>
-        <h1>Welcome</h1>
-        <p>Faith • Hope • Love</p>
+        <h1>“Come to Me”</h1>
+        <p>Matthew 11:28</p>
+        <button onclick="alert('God Bless You 🙏')">Join Us</button>
     </div>
 </div>
 
@@ -121,7 +140,7 @@ width="100%" height="250" style="border:0;">
 <!-- CONTACT -->
 <section class="contact">
 <h2>📞 Contact</h2>
-<a href="https://wa.me/919999999999">Chat on WhatsApp</a>
+<a href="https://wa.me/91XXXXXXXXXX">Chat on WhatsApp</a>
 </section>
 
 <!-- GALLERY -->
