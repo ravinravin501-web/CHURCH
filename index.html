@@ -1,90 +1,92 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="ta">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- GOOGLE FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet">
 
 <title>Mount Carmel Church Ramapuram</title>
 
 <style>
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    transition: 0.3s;
+    font-family: 'Poppins', 'Noto Sans Tamil', sans-serif;
+    transition: 0.4s;
 }
 
-/* DARK & LIGHT MODE */
-.dark {
-    background: #111;
-    color: white;
-}
-.light {
-    background: #f5f5f5;
-    color: black;
-}
+/* THEMES */
+.light { background: #f5f5f5; color: #111; }
+.dark { background: #0d0d0d; color: #fff; }
 
 /* HEADER */
 header {
     padding: 15px;
-    font-size: 20px;
+    text-align: center;
     font-weight: 600;
+    font-size: 20px;
     background: linear-gradient(45deg, #8b0000, #b22222);
     color: white;
-    text-align: center;
-    letter-spacing: 1px;
 }
 
-/* HERO SECTION WITH JESUS IMAGE */
+/* HERO */
 .hero {
-    height: 90vh;
+    height: 100vh;
     background: url('jesus.jpg') center/cover no-repeat;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
 }
-.hero div {
-    background: rgba(0,0,0,0.6);
+.hero-box {
+    background: rgba(0,0,0,0.65);
     padding: 25px;
     border-radius: 15px;
 }
 
-/* HEADINGS */
-h1 {
-    font-size: 38px;
-}
-h2 {
-    color: #8b0000;
+/* TEXT */
+h1 { font-size: 36px; }
+.tamil {
+    font-size: 18px;
+    margin-top: 10px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
     padding: 25px;
+    text-align: center;
 }
 
-/* BUTTONS */
+/* BUTTON */
 button {
     padding: 12px 25px;
-    border: none;
     border-radius: 25px;
-    cursor: pointer;
+    border: none;
     background: #8b0000;
     color: white;
-    font-size: 16px;
+    cursor: pointer;
+}
+
+/* MAP BUTTON */
+.map-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #007bff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
 }
 
 /* CONTACT */
 .contact a {
-    display: inline-block;
-    padding: 12px;
     background: #25D366;
+    padding: 12px 20px;
+    border-radius: 25px;
     color: white;
     text-decoration: none;
-    border-radius: 25px;
 }
 
 /* GALLERY */
@@ -94,29 +96,41 @@ button {
     border-radius: 10px;
 }
 
-/* TOGGLE BUTTON */
+/* FLOATING TOGGLE */
 .toggle {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     background: black;
     color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 </style>
 </head>
 
 <body class="light">
 
-<button class="toggle" onclick="toggleMode()">🌙</button>
+<!-- NIGHT MODE -->
+<div class="toggle" onclick="toggleMode()">🌙</div>
 
 <header>
 MOUNT CARMEL CHURCH RAMAPURAM
 </header>
 
+<!-- HERO -->
 <div class="hero">
-    <div>
-        <h1>“Come to Me”</h1>
+    <div class="hero-box">
+        <h1>Come to Me</h1>
         <p>Matthew 11:28</p>
+
+        <!-- TAMIL VERSE -->
+        <div class="tamil">
+        “சுமைகளைச் சுமந்துகொண்டிருப்பவர்கள் எல்லாரும் என்னிடத்தில் வாருங்கள்; நான் உங்களுக்கு இளைப்பாறுதலை அளிப்பேன்.”
+        </div>
+
+        <br>
         <button onclick="alert('God Bless You 🙏')">Join Us</button>
     </div>
 </div>
@@ -128,13 +142,22 @@ MOUNT CARMEL CHURCH RAMAPURAM
 <p>Weekdays: 6:30 AM</p>
 </section>
 
-<!-- MAP -->
+<!-- LOCATION -->
 <section>
-<h2>📍 Location</h2>
+<h2>📍 Our Location</h2>
+
 <iframe 
 src="https://www.google.com/maps?q=Mount+Carmel+Church+Ramapuram&output=embed"
 width="100%" height="250" style="border:0;">
 </iframe>
+
+<br>
+
+<a class="map-btn" target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Mount+Carmel+Church+Ramapuram">
+Open in Google Maps
+</a>
+
 </section>
 
 <!-- CONTACT -->
@@ -148,7 +171,7 @@ width="100%" height="250" style="border:0;">
 <h2>📷 Gallery</h2>
 <img src="church.jpg">
 <img src="church2.jpg">
-<br>
+<br><br>
 <a href="gallery.html">
 <button>View More</button>
 </a>
@@ -163,4 +186,5 @@ function toggleMode() {
 
 </body>
 </html>
-```
+
+
