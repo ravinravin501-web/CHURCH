@@ -126,12 +126,14 @@ button {
 
 <body class="light">
 
+<!-- FLOAT BUTTON -->
 <div class="toggle" onclick="toggleMode()">🌙</div>
 
 <header>
 MOUNT CARMEL CHURCH RAMAPURAM
 </header>
 
+<!-- SCROLL TEXT -->
 <div class="marquee">
 <span>புனித கார்மல் அன்னையே எங்களுக்காக வேண்டிக்கொள்ளும் ✝️</span>
 </div>
@@ -155,8 +157,15 @@ MOUNT CARMEL CHURCH RAMAPURAM
 
 <!-- COUNTDOWN -->
 <section>
-<h2>🎉 Feast Day Countdown</h2>
-<div id="countdown"></div>
+<h2>🎉 Feast Day Countdown (July 16)</h2>
+<div id="countdown" style="
+font-size:22px;
+background:linear-gradient(45deg,#8b0000,#b22222);
+color:white;
+padding:15px;
+border-radius:10px;
+display:inline-block;">
+</div>
 </section>
 
 <!-- LOCATION -->
@@ -181,7 +190,7 @@ Open in Google Maps
 <section>
 <h2>🎥 Church Videos</h2>
 <iframe width="100%" height="250"
-src="https://youtu.be/h2RaI5lQD1A?si=EDUa1mKGQLZTWNAM&list=jrcreations4831"
+src="https://www.youtube.com/embed?listType=user_uploads&list=jrcreations4831"
 frameborder="0" allowfullscreen></iframe>
 <br><br>
 <a href="https://youtube.com/@jrcreations4831" target="_blank">
@@ -200,6 +209,7 @@ frameborder="0" allowfullscreen></iframe>
 </a>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
 புனித கார்மல் அன்னையே எங்களுக்காக வேண்டிக்கொள்ளும்
 </footer>
@@ -216,8 +226,21 @@ function toggleMode() {
     document.body.classList.toggle("light");
 }
 
-// COUNTDOWN
-var feastDate = new Date("August 15, 2026 00:00:00").getTime();
+// AUTO JULY 16 COUNTDOWN
+function getNextFeast() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var feast = new Date(year, 6, 16, 0, 0, 0);
+
+    if (now > feast) {
+        feast = new Date(year + 1, 6, 16, 0, 0, 0);
+    }
+
+    return feast.getTime();
+}
+
+var feastDate = getNextFeast();
+
 setInterval(function() {
     var now = new Date().getTime();
     var d = feastDate - now;
@@ -228,7 +251,12 @@ setInterval(function() {
     var s = Math.floor((d%(1000*60))/1000);
 
     document.getElementById("countdown").innerHTML =
-    days+"d "+h+"h "+m+"m "+s+"s";
+    days+" நாட்கள் "+h+" மணி "+m+" நிமிடம் "+s+" விநாடி";
+
+    if (d < 0) {
+        document.getElementById("countdown").innerHTML =
+        "🎊 இன்று திருவிழா நாள்!";
+    }
 
 },1000);
 
@@ -241,6 +269,8 @@ window.onload = function() {
 
 </body>
 </html>
+
+
 
 
 
