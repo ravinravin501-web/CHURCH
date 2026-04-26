@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="ta">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- FONTS -->
@@ -25,20 +26,21 @@ header {
     text-align:center;
     background:#8b0000;
     color:white;
+    font-weight:bold;
 }
 
-/* MENU BUTTON */
+/* MENU BUTTON (LEFT SIDE FIXED) */
 .menu-btn {
     position: fixed;
     top: 15px;
-    left: 15px;
-    font-size: 24px;
+    left: 10px;
+    font-size: 26px;
     background: #8b0000;
     color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
+    padding: 10px 14px;
+    border-radius: 6px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 9999;
 }
 
 /* SIDEBAR */
@@ -50,8 +52,9 @@ header {
     left: 0;
     background: #111;
     overflow-x: hidden;
-    transition: 0.3s;
+    transition: 0.4s;
     padding-top: 60px;
+    z-index: 9998;
 }
 
 .sidebar a {
@@ -78,8 +81,9 @@ header {
     height:100vh;
     background:url('jesus.jpg') center/cover no-repeat;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
+    text-align:center;
     color:white;
 }
 
@@ -87,11 +91,13 @@ header {
     background:rgba(0,0,0,0.6);
     padding:20px;
     border-radius:10px;
-    text-align:center;
 }
 
 /* SECTION */
-section { padding:20px; text-align:center; }
+section {
+    padding:20px;
+    text-align:center;
+}
 
 /* BUTTON */
 button {
@@ -102,7 +108,7 @@ button {
     color:white;
 }
 
-/* FLOAT NIGHT BUTTON */
+/* NIGHT BUTTON */
 .toggle {
     position:fixed;
     bottom:20px;
@@ -111,6 +117,8 @@ button {
     color:white;
     padding:12px;
     border-radius:50%;
+    font-size:18px;
+    cursor:pointer;
 }
 
 /* FOOTER */
@@ -125,9 +133,10 @@ button {
 
 <body class="light">
 
-<!-- MENU -->
+<!-- MENU BUTTON -->
 <div class="menu-btn" onclick="openMenu()">☰</div>
 
+<!-- SIDEBAR -->
 <div id="sidebar" class="sidebar">
 <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">✖</a>
 <a href="index.html">🏠 Home</a>
@@ -139,20 +148,33 @@ button {
 <!-- NIGHT MODE -->
 <div class="toggle" onclick="toggleMode()">🌙</div>
 
-<header>MOUNT CARMEL CHURCH RAMAPURAM</header>
+<header>
+MOUNT CARMEL CHURCH RAMAPURAM
+</header>
 
 <!-- HERO -->
 <div class="hero">
 <div class="hero-box">
 <h1>Come to Me</h1>
-<p>“என்னிடத்தில் வாருங்கள்”</p>
+
+<p style="font-family:'Noto Sans Tamil',sans-serif;">
+“சுமைகளைச் சுமந்துகொண்டிருப்பவர்கள் எல்லாரும் என்னிடத்தில் வாருங்கள்; நான் உங்களுக்கு இளைப்பாறுதலை அளிப்பேன்.” (மத்தேயு 11:28)
+</p>
+
 </div>
 </div>
 
 <!-- COUNTDOWN -->
 <section>
 <h2>🎉 Feast Countdown (July 16)</h2>
-<div id="countdown"></div>
+<div id="countdown" style="
+font-size:22px;
+background:linear-gradient(45deg,#8b0000,#b22222);
+color:white;
+padding:15px;
+border-radius:10px;
+display:inline-block;">
+</div>
 </section>
 
 <!-- LOCATION -->
@@ -167,27 +189,28 @@ width="100%" height="250"></iframe>
 </footer>
 
 <script>
-// SIDEBAR
-function openMenu() {
-    document.getElementById("sidebar").style.width = "250px";
+
+/* MENU */
+function openMenu(){
+document.getElementById("sidebar").style.width="250px";
 }
-function closeMenu() {
-    document.getElementById("sidebar").style.width = "0";
+function closeMenu(){
+document.getElementById("sidebar").style.width="0";
 }
 
-// NIGHT MODE
-function toggleMode() {
-    document.body.classList.toggle("dark");
-    document.body.classList.toggle("light");
+/* NIGHT MODE */
+function toggleMode(){
+document.body.classList.toggle("dark");
+document.body.classList.toggle("light");
 }
 
-// COUNTDOWN JULY 16
+/* JULY 16 COUNTDOWN */
 function getNextFeast(){
-    let now=new Date();
-    let year=now.getFullYear();
-    let feast=new Date(year,6,16);
-    if(now>feast) feast=new Date(year+1,6,16);
-    return feast.getTime();
+let now=new Date();
+let year=now.getFullYear();
+let feast=new Date(year,6,16);
+if(now>feast) feast=new Date(year+1,6,16);
+return feast.getTime();
 }
 
 let feastDate=getNextFeast();
@@ -202,13 +225,16 @@ let m=Math.floor((d%(1000*60*60))/(1000*60));
 let s=Math.floor((d%(1000*60))/1000);
 
 document.getElementById("countdown").innerHTML=
-days+"d "+h+"h "+m+"m "+s+"s";
+days+" நாட்கள் "+h+" மணி "+m+" நிமிடம் "+s+" விநாடி";
 
 },1000);
+
 </script>
 
 </body>
 </html>
+
+    
 
 
 
